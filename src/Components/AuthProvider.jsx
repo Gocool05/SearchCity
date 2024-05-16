@@ -1,7 +1,7 @@
-import { AuthProvider } from "@refinedev/core";
 
-  const  AuthProvide = {
-  login: async ({ email, password, remember, providerName }) => {
+
+const AuthProvider = () => {
+  const login = async ({ email, password, remember, providerName }) => {
     // You can handle the login process according to your needs.
 
     // If the process is successful.
@@ -16,8 +16,9 @@ import { AuthProvider } from "@refinedev/core";
     //     message: "Invalid email or password",
     //   },
     // };
-  },
-  logout: async () => {
+  };
+
+  const logout = async () => {
     // You can handle the login process according to your needs.
 
     // If the process is successful.
@@ -32,8 +33,9 @@ import { AuthProvider } from "@refinedev/core";
     //     message: "Invalid email or password",
     //   },
     // };
-  },
-  check: async () => {
+  };
+
+  const check = async () => {
     // You can handle the login process according to your needs.
 
     // If the process is successful.
@@ -48,8 +50,9 @@ import { AuthProvider } from "@refinedev/core";
     //     message: "Invalid email or password",
     //   },
     // };
-  },
-  onError: async (error) => {
+  };
+
+  const onError = async (error) => {
     // You can handle the login process according to your needs.
 
     // If the process is successful.
@@ -64,8 +67,7 @@ import { AuthProvider } from "@refinedev/core";
     //     message: "Invalid email or password",
     //   },
     // };
-  },
+  };
+}
 
-};
-
-export default AuthProvide;
+export default AuthProvider;

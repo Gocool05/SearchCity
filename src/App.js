@@ -16,13 +16,23 @@ import Register from './Pages/Register/Register';
 // import AuthProvide from './Components/AuthProvider';
 import TopSaver from './Pages/TopSaver';
 import Chat from './Pages/Chat';
+import AuthProvider from './Components/AuthProvider';
+import Referral from './Pages/Referral';
+import MyCoins from './Pages/MyCoins';
+import Settings from './Pages/Settings';
+import AuthCallBack from './AuthCallBack';
+import { QueryClient, QueryClientProvider } from 'react-query';
+
+
 function App() {
+  const queryClient = new QueryClient();
   return (
     <BrowserRouter>
+    <QueryClientProvider client={queryClient}>
       <Refine
         dataProvider={DataProvider("https://api.moviemads.com")}
         routerProvider={routerProvider}
-        // authProvider={AuthProvide}
+        authProvider={AuthProvider}
         resources={[
           {
             name:'home',
@@ -42,11 +52,14 @@ function App() {
               </Authenticated>
             }
           >
-            <Route index element={<Home />} />
+{/*             
             <Route path="/topSaver" element={<TopSaver type='Page' />} />
             <Route path="/chat" element={<Chat type='Page' />} />
+            <Route path="/referral" element={<Referral type='Page' />} />
+            <Route path="/myCoin" element={<MyCoins type='Page' />} />
+            <Route path="/Settings" element={<Settings type='Page' />} /> */}
+  
           </Route>
-
 
           <Route
             element={
@@ -56,9 +69,18 @@ function App() {
             }
           >
             <Route path="/login" element={<Login type="login" />} />
+            <Route path="/register" element={<Register type="register" />} />
+            <Route path="/auth/keycloak/callback" element={<AuthCallBack />} />
+            <Route path='/' element={<Home />} />
+            <Route path="/topSaver" element={<TopSaver type='Page' />} />
+            <Route path="/chat" element={<Chat type='Page' />} />
+            <Route path="/referral" element={<Referral type='Page' />} />
+            <Route path="/myCoin" element={<MyCoins type='Page' />} />
+            <Route path="/Settings" element={<Settings type='Page' />} />
           </Route>
         </Routes>
       </Refine>
+      </QueryClientProvider>
   </BrowserRouter>
   );
 }

@@ -14,6 +14,15 @@ const SideBar = () => {
  const chat = () =>{
   navigate("/chat");
  }
+ const referral = () =>{
+  navigate("/referral");
+ }
+ const myCoins = () =>{
+  navigate("/myCoin");
+ }
+ const Settings = () =>{
+  navigate("/Settings");
+ }
 
 
   return (
@@ -57,7 +66,7 @@ const SideBar = () => {
     
         >
        <GiftOutlined />
-          <div className="relative leading-[140%] font-medium inline-block min-w-[120px]">
+          <div onClick={referral} className="relative leading-[140%] font-medium inline-block min-w-[120px]">
             Refer a Friend
           </div>
         </div>
@@ -66,7 +75,7 @@ const SideBar = () => {
 
         >
           <SettingOutlined />
-          <div className="relative leading-[140%] font-medium inline-block min-w-[81px]">
+          <div onClick={myCoins} className="relative leading-[140%] font-medium inline-block min-w-[81px]">
             My Coins
           </div>
         </div>
@@ -75,7 +84,7 @@ const SideBar = () => {
        
         >
           <SettingOutlined />
-          <div className="relative leading-[140%] font-medium inline-block min-w-[72px]">
+          <div onClick={Settings} className="relative leading-[140%] font-medium inline-block min-w-[72px]">
             Settings
           </div>
         </div>

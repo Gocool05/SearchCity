@@ -53,12 +53,16 @@ const Login = () => {
   <button className="self-stretch border-none rounded-lg bg-gradient-to-r from-[#ff1cf6] via-[#fd6d1c] to-[#de2442] flex flex-row items-start justify-center py-3 pr-5 pl-[21px] z-[1]">
     <div className="h-[42px] w-[315.1px] relative rounded-lg bg-gradient-to-r from-[#ff1cf6] via-[#fd6d1c] to-[#de2442] hidden" />
     <div className="relative text-mini-7 uppercase font-semibold font-h3-bold text-instagram-light-1 text-left inline-block min-w-[78px] z-[1]">
-      Continue
+      Login
     </div>
   </button>
+  <a  href='https://strapi.tamilvaidhyam.com/api/connect/keycloak' className="self-stretch border-none rounded-lg bg-gradient-to-r from-[#ff1cf6] via-[#fd6d1c] to-[#de2442] flex flex-row items-start justify-center py-3 pr-5 pl-[21px] z-[1]">
+    <div className="h-[42px] w-[315.1px] relative rounded-lg bg-gradient-to-r from-[#ff1cf6] via-[#fd6d1c] to-[#de2442] hidden" />
+    <div className="relative text-mini-7 uppercase font-semibold font-h3-bold text-instagram-light-1 text-left inline-block min-w-[78px] z-[1]">
+      Keyclock
+    </div>
+  </a>
 </form>
-
-
       <div className="w-[373.7px] flex flex-col items-start justify-start gap-[21.1px] max-w-full">
         <div className="self-stretch flex flex-row items-start justify-center py-0 pr-5 pl-[21px]">
           <div className="relative inline-block min-w-[76.7px] shrink-0 [debug_commit:1de1738]">
